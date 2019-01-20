@@ -1,12 +1,12 @@
 class mainScene {
 	preload() {
-		this.load.image('player', 'assets/player.png');
-		this.player = this.physics.add.sprite(100,100,'player');
+		this.load.image('rosie', 'assets/rosie.png');
 		this.load.image('coin', 'assets/coin.png');
-		this.coin = this.physics.add.sprite(300,300,'coin');
 	}
 
 	create() {
+        this.player = this.physics.add.sprite(100,100,'rosie');
+        this.coin = this.physics.add.sprite(300,300,'coin');
 		this.score = 0;
 		let style = { font: '20px Arial', fill: '#fff' };
 		this.scoreText = this.add.text(20, 20, 'score: ' + this.score, style);
