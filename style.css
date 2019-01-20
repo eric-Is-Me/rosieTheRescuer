@@ -11,3 +11,7 @@ h1 {
 	border: 1px solid blue;
 	background-color: red;
 }
+
+p {
+    font-family: Open Sans;
+}
