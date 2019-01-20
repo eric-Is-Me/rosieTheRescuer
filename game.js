@@ -47,8 +47,12 @@ class mainScene {
         
 		if(this.arrow.right.isDown) {
 			this.player.x += 3;
+            if(this.player.x >= 3050)
+                this.player.x = 3050;
 		} else if(this.arrow.left.isDown) {
 			this.player.x -= 3;
+            if(this.player.x <= 0)
+                this.player.x = 0;
 		}
                 
         if(this.arrow.up.isDown) {
