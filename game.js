@@ -4,6 +4,10 @@ class mainScene {
 		this.load.image('rosie', 'assets/rosie.png');
 		this.load.image('coin', 'assets/coin.png');
         this.load.image('tiles1', 'assets/PNG/jungle_pack_05.png');
+        this.load.image('rosie_r_stand', 'assets/rosie_standing_right.png');
+        this.load.image('rosie_l_stand', 'assets/rosie_standing_left.png');
+        this.load.image('rosie_r_walk', 'assets/rosie_walking_right.png');
+        this.load.image('rosie_l_walk', 'assets/rosie_walking_left.png');
 	}
 
 	create() {
@@ -30,11 +34,12 @@ class mainScene {
         groundLayer.resizeWorld();
         
         this.game.camera.follow(this.player);
+        this.key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 	}
 
 	hit() {
 		this.coin.x = Phaser.Math.Between(100, 600);
-		this.coin.y = Phaser.Math.Between(100,300);
+		this.coin.y = Phaser.Math.Between(100, 300);
 
 		this.score += 10;
 
@@ -55,15 +60,23 @@ class mainScene {
 		if(this.physics.overlap(this.player, this.coin)) {
 			this.hit();
 		}
+        this.arrow = this.input.keyboard.createCursorKeys();
         
-		this.arrow = this.input.keyboard.createCursorKeys();
 		if(this.arrow.right.isDown) {
 			this.player.x += 3;
+            if(this.player.x >= 3050)
+                this.player.x = 3050;
 		} else if(this.arrow.left.isDown) {
 			this.player.x -= 3;
+            if(this.player.x <= 0)
+                this.player.x = 0;
 		}
         if(this.arrow.up.isDown) {
             this.player.body.velocity.y = -300;
+        }
+        // Spacebar key pressed
+        if(this.key.isDown) {
+            console.log('Spacebar has been pressed!');
         }
 	}
 }
