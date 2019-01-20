@@ -4,6 +4,8 @@ class mainScene {
 		this.player = this.physics.add.sprite(100,100,'player');
 		this.load.image('coin', 'assets/coin.png');
 		this.coin = this.physics.add.sprite(300,300,'coin');
+        this.load.tilemapTiledJSON('map1', 'map.json');
+        this.load.image('tiles1', 'assets/map1.png');
 	}
 
 	create() {
@@ -14,6 +16,10 @@ class mainScene {
         this.player.body.checkCollision.up = true;
         this.player.body.checkCollision.right = true;
         this.player.body.checkCollision.left = true;
+        
+        var map1 = this.make.tilemap({key: 'map1'});
+        var tileset1 = map1.addTilesetImage('level1', 'tiles1');
+        var layer1 = map1.createStaticLayer('World1', tileset1, 0, 0);
 	}
 
 	hit() {
@@ -44,13 +50,12 @@ class mainScene {
 		} else if(this.arrow.left.isDown) {
 			this.player.x -= 3;
 		}
-                
         if(this.arrow.up.isDown) {
             this.player.body.velocity.y = -300;
         }
 	}
 }
-new Phaser.Game({
+var game = new Phaser.Game({
     width: 4000,
     height: 700,
     backgroundColor: '#3498db',
