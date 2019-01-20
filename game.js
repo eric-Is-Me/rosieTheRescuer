@@ -47,13 +47,12 @@ class mainScene {
 			this.hit();
 		}
 	}
-
-	new Phaser.Game({
-		width: 500,
-		height: 400,
-		backgroundColor: '#3498db',
-		scene: mainScene,
-		physics: { default: 'arcade'},
-		parent: 'game'
-	});
 }
+new Phaser.Game({
+    width: 500,
+    height: 400,
+    backgroundColor: '#3498db',
+    scene: mainScene,
+    physics: { default: 'arcade'},
+    parent: 'game'
+});
