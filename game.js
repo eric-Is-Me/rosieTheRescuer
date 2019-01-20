@@ -1,9 +1,9 @@
 class mainScene {
 	preload() {
-        this.load.tilemapTiledJSON('tilemap', 'assets/level1.json');
+        //this.load.tilemapTiledJSON('tilemap', 'assets/level1.json');
 		this.load.image('rosie', 'assets/rosie.png');
 		this.load.image('coin', 'assets/coin.png');
-        this.load.image('tiles1', 'assets/PNG/jungle_pack_05.png');
+        //this.load.image('tiles1', 'assets/PNG/jungle_pack_05.png');
         this.load.image('rosie_r_stand', 'assets/rosie_standing_right.png');
         this.load.image('rosie_l_stand', 'assets/rosie_standing_left.png');
         this.load.image('rosie_r_walk', 'assets/rosie_walking_right.png');
@@ -21,19 +21,19 @@ class mainScene {
         this.player.body.checkCollision.right = true;
         this.player.body.checkCollision.left = true;
         
-        var map = this.add.tilemap('tilemap');
-        map.addTilesetImage('GroundLayer', 'tiles1');
+        //var map = this.add.tilemap('tilemap');
+        //map.addTilesetImage('GroundLayer', 'tiles1');
         
         /*this.map = this.add.tilemap('tilemap');
         this.map.addTilesetImage('centerGround', 'tiles1');*/
         
-        var groundLayer = map.createStaticLayer('GroundLayer');
-        console.log(groundLayer);
+        //var groundLayer = map.createStaticLayer('GroundLayer');
+        //console.log(groundLayer);
         //map.setCollisionBetween(1, 100, true, 'GroundLayer');
         
-        groundLayer.resizeWorld();
+        //groundLayer.resizeWorld();
         
-        this.game.camera.follow(this.player);
+        //this.game.camera.follow(this.player);
         this.key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 	}
 
