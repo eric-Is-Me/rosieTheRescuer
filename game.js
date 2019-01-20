@@ -10,19 +10,6 @@ class mainScene {
 		this.score = 0;
 		let style = { font: '20px Arial', fill: '#fff' };
 		this.scoreText = this.add.text(20, 20, 'score: ' + this.score, style);
-		
-		this.arrow = this.input.keyboard.createCursorKeys();
-		if(this.arrow.right.isDown) {
-			this.player.x += 3;
-		} else if(this.arrow.left.isDown) {
-			this.player.x -= 3;
-		}
-
-		if(this.arrow.up.isDown) {
-			this.player.y -= 3;
-		} else if(this.arrow.down.isDown) {
-			this.player.y += 3;
-		}
 	}
 
 	hit() {
@@ -45,6 +32,19 @@ class mainScene {
 	update() {
 		if(this.physics.overlap(this.player, this.coin)) {
 			this.hit();
+		}
+        
+		this.arrow = this.input.keyboard.createCursorKeys();
+		if(this.arrow.right.isDown) {
+			this.player.x += 3;
+		} else if(this.arrow.left.isDown) {
+			this.player.x -= 3;
+		}
+
+		if(this.arrow.up.isDown) {
+			this.player.y -= 3;
+		} else if(this.arrow.down.isDown) {
+			this.player.y += 3;
 		}
 	}
 }
