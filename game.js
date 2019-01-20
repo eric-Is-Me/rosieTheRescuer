@@ -14,11 +14,13 @@ class mainScene {
         this.player.body.checkCollision.up = true;
         this.player.body.checkCollision.right = true;
         this.player.body.checkCollision.left = true;
+        
+        this.key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 	}
 
 	hit() {
 		this.coin.x = Phaser.Math.Between(100, 600);
-		this.coin.y = Phaser.Math.Between(100,300);
+		this.coin.y = Phaser.Math.Between(100, 300);
 
 		this.score += 10;
 
@@ -37,8 +39,8 @@ class mainScene {
 		if(this.physics.overlap(this.player, this.coin)) {
 			this.hit();
 		}
+        this.arrow = this.input.keyboard.createCursorKeys();
         
-		this.arrow = this.input.keyboard.createCursorKeys();
 		if(this.arrow.right.isDown) {
 			this.player.x += 3;
 		} else if(this.arrow.left.isDown) {
@@ -47,6 +49,9 @@ class mainScene {
                 
         if(this.arrow.up.isDown) {
             this.player.body.velocity.y = -300;
+        }
+        if(this.key.isDown) {
+            console.log('Spacebar has been pressed!');
         }
 	}
 }
