@@ -62,6 +62,13 @@ class mainScene {
 		}
         this.arrow = this.input.keyboard.createCursorKeys();
         
+        if(this.player.y >= 670) {
+            this.player.body.gravity.y = 0;
+            this.player.y = 670;
+        }
+        else
+            this.player.body.gravity.y = 500;
+        
 		if(this.arrow.right.isDown) {
 			this.player.x += 3;
             if(this.player.x >= 1175)
