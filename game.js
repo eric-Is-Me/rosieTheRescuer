@@ -1,3 +1,10 @@
+var config = {
+    type: Phaser.AUTO,
+    width: 4000,
+    height: 600,
+    backgroundColor: '#2d2d2d',
+    parent
+}
 class mainScene {
 	preload() {
 		this.load.image('player', 'assets/player.png');
