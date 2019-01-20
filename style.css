@@ -5,12 +5,15 @@ html, body {
 
 h1 {
 	font-family: Open Sans;
+    color: white;
 }
 
 #start {
 	display: inline-block;
-	border: 1px solid blue;
-	background-color: red;
+	color: white;
+    font-family: Open Sans;
+    font-size: 18px;
+    font-style: bold;
 }
 
 p {
