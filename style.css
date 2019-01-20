@@ -1,16 +1,19 @@
 html, body {
     margin: 0;
-    background-color: #3498db;
+    background-color: #19602c;
 }
 
 h1 {
 	font-family: Open Sans;
+    color: white;
 }
 
 #start {
 	display: inline-block;
-	border: 1px solid blue;
-	background-color: red;
+	color: white;
+    font-family: Open Sans;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 p {
