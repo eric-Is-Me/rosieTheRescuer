@@ -62,9 +62,9 @@ class mainScene {
 		}
         this.arrow = this.input.keyboard.createCursorKeys();
         
-        if(this.player.y >= 470) {
+        if(this.player.y >= 400) {
             this.player.body.gravity.y = 0;
-            this.player.y = 470;
+            this.player.y = 400;
         }
         else
             this.player.body.gravity.y = 500;
