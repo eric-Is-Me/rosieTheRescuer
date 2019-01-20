@@ -10,6 +10,10 @@ class mainScene {
 		this.score = 0;
 		let style = { font: '20px Arial', fill: '#fff' };
 		this.scoreText = this.add.text(20, 20, 'score: ' + this.score, style);
+        this.player.body.gravity.y = 500;
+        this.player.body.checkCollision.up = true;
+        this.player.body.checkCollision.right = true;
+        this.player.body.checkCollision.left = true;
 	}
 
 	hit() {
@@ -40,12 +44,10 @@ class mainScene {
 		} else if(this.arrow.left.isDown) {
 			this.player.x -= 3;
 		}
-
-		if(this.arrow.up.isDown) {
-			this.player.y -= 3;
-		} else if(this.arrow.down.isDown) {
-			this.player.y += 3;
-		}
+                
+        if(this.arrow.up.isDown) {
+            this.player.body.velocity.y = -300;
+        }
 	}
 }
 new Phaser.Game({
