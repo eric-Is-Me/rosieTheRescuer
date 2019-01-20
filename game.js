@@ -47,16 +47,20 @@ class mainScene {
         
 		if(this.arrow.right.isDown) {
 			this.player.x += 3;
-            if(this.player.x >= 3050)
-                this.player.x = 3050;
+            if(this.player.x >= 3975)
+                this.player.x = 3975;
 		} else if(this.arrow.left.isDown) {
 			this.player.x -= 3;
-            if(this.player.x <= 0)
-                this.player.x = 0;
+            if(this.player.x <= 25)
+                this.player.x = 25;
 		}
                 
-        if(this.arrow.up.isDown) {
+        if(this.arrow.up.isDown & this.player.y >= 30) {
             this.player.body.velocity.y = -300;
+            if(this.player.y <= 40) {
+                this.player.body.velocity.y = 0;
+                this.player.y = 30;
+            }
         }
         // Spacebar key pressed
         if(this.key.isDown) {
