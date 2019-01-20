@@ -1,9 +1,18 @@
+html, body {
+    margin: 0;
+    background-color: #3498db;
+}
+
 h1 {
 	font-family: Open Sans;
 }
 
 #start {
-	display: block;
+	display: inline-block;
 	border: 1px solid blue;
 	background-color: red;
+}
+
+p {
+    font-family: Open Sans;
 }

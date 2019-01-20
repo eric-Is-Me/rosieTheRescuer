@@ -9,14 +9,16 @@
 
     </head>
   <body>
+    <center>
     <h1>Rosie the Rescuer</h1>
+  </center>
       
-    
+    <center>
     <p id="start" onclick="myFunction()">START.</p>
+  </center>
     
     
-<canvas id="myCanvas" width="4000" height="700"
-style="border:1px solid #d3d3d3;">
+<canvas id="myCanvas" width="1150" height="700">
 
 </canvas>
 
@@ -24,10 +26,10 @@ style="border:1px solid #d3d3d3;">
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 ctx.font = "15px Open Sans";
-ctx.fillText("Control Rosie Lovelace to defeat Dr. Vim and rescue her man Stan Turing!",30,50);
-ctx.fillText("Left/Right Arrow Keys: Move Left/Right", 30, 70);
-ctx.fillText("Up Arrow Key (Repeatedly): Jump", 30, 90);
-ctx.fillText("Spacebar: Shoot Roses", 30, 110);
+ctx.fillText("Control Rosie Lovelace to defeat Dr. Vim and rescue her man Stan Turing!",350,50);
+ctx.fillText("Left/Right Arrow Keys: Move Left/Right", 475, 70);
+ctx.fillText("Up Arrow Key (Repeatedly): Jump", 490, 90);
+ctx.fillText("Spacebar: Shoot Roses", 530, 110);
   
       
     
@@ -38,6 +40,5 @@ function myFunction() {
 </script>
   
     <div id="game"></div>
-    <p>Use the arrow keys to move around and collect the coins.</p>
   </body>
 </html>
