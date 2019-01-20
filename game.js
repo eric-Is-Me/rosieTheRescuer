@@ -2,6 +2,10 @@ class mainScene {
 	preload() {
 		this.load.image('rosie', 'assets/rosie.png');
 		this.load.image('coin', 'assets/coin.png');
+        this.load.image('rosie_r_stand', 'assets/rosie_standing_right.png');
+        this.load.image('rosie_l_stand', 'assets/rosie_standing_left.png');
+        this.load.image('rosie_r_walk', 'assets/rosie_walking_right.png');
+        this.load.image('rosie_l_walk', 'assets/rosie_walking_left.png');
 	}
 
 	create() {
