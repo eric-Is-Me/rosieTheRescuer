@@ -50,6 +50,7 @@ class mainScene {
         if(this.arrow.up.isDown) {
             this.player.body.velocity.y = -300;
         }
+        // Spacebar key pressed
         if(this.key.isDown) {
             console.log('Spacebar has been pressed!');
         }
